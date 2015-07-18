@@ -1,0 +1,86 @@
+
+Liste des choses à faire
+-------------------------
+
+checker avec le projet mainwin QGraphicsScene::mousePressEvent handler dans cgraphicsitem
+Revoir le system d'authorization dans le diagram, risque avec la classe de base de l'effacer
+
+Le modele cree les items (ainsi que les elements graphiques), fait le lien c'est les items peuvent se lier entre eux
+> manque le type de graphique dans le system...
+Qu'st qu'un diagram ? >> le document conserve le type de diagram
+
+>>>> C'est itemmodel qui fait le lien entre le model de la simulation et le modele graphique 
+
+
+
+12 aout
+  attention lors de la dessasociation il faut checker pour le process que le process n'est pas implementer (checker que la scene est null) 
+  05 sept : bien reflechir, il y a des cas ou de toute facon il faudra effacer les items graphics...
+
+
+Ajouter les noms/ ou flux dans les arrow
+
+
+31 decembre 2012
+
+Mais d'abord,
+Simplifier la partie Document/Vue
+reorganiser les répertoires
+
+
+05 Janvier 2013
+La gestion des toolitemmodel & toolbox sera à revoir pour gerer plus simplement les plugins.
+
+
+17 Février 2013
+dans le diagram de context bien faire le lien avec l'implementation
+
+
+Ameliorer la creation de texte libre c'est moche et moyennant pratique.
+Simplifier la creation des objets dans les documents 
+
+Creer le click droit pour faire un nouveau diagram sur les process
+
+removeFlowItem --> gerer le cas du terminators
+
+Faire une class de gestion des log et message console
+
+Faire une fenetre de configuration des parameters
+
+Gerer la selection multiple dans les properties
+
+
+Gerer les types de flows (control/data, continue...)
+Ensuite gerer les bus
+
+
+
+>> creer des core dumps
+ulimit -c unlimited
+  > penser à catcher le signal pour le récuperer directement dans l'application
+
+23 juin 2013
+	Attention bug dans les output de processintance les connecteurs n'existent quand un type -> à regarder de près
+	mettre les messagebox pour les noms de fichiers à créer.
+
+14 juillet 2013
+	Faire une passe sur les factory il doit y avoir pas mal de memory leak a retirer.... lors de la creation/lecture de fichiers
+
+26 avril 2014
+	En pleine conception de la lecture, je vois un truc de louche dans les connecteurs, en effet il n"y a que des input ... Comment sont géré les outputs ?? 
+		Surement à revoir
+
+Penser à reprendre le processus de compilation et faire des libs intermediaires, 
+
+28 juin 2014
+  data type dictionnary
+  type insertion
+  reorganiser les fichiers, faire des modules
+  Ameliorer la class document
+  
+
+
+
+
+
+

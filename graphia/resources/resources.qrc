@@ -1,0 +1,54 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>flow_block.png</file>
+    <file>new_file.png</file>
+    <file>open_file.png</file>
+    <file>save.png</file>
+    <file>save_as.png</file>
+    <file>exit.png</file>
+    
+    <file>undo.png</file>
+    <file>cut.png</file>
+    <file>copy.png</file>
+    <file>paste.png</file>
+
+    <file>create.png</file>
+    <file>form.png</file>
+    
+    <file>select.png</file>
+    <file>text_tool.png</file>
+    
+    <file>circle.png</file>
+    <file>circle_lock.png</file>
+    <file>arrow.png</file>
+    <file>arrow_lock.png</file>
+    <file>input.png</file>
+    <file>input_lock.png</file>
+    <file>output.png</file>
+    <file>output_lock.png</file>
+    <file>bus.png</file>
+    <file>bus_lock.png</file>
+    <file>bus_link.png</file>
+    <file>bus_link_lock.png</file>    
+    <file>store.png</file>
+    <file>store_lock.png</file>
+    <file>rectangle.png</file>
+    <file>rectangle_lock.png</file>
+
+    <file>close.png</file>
+    <file>erase.png</file>
+    <file>display_diagram.png</file>
+
+    <file>square.png</file>
+    <file>checked.png</file>
+    <file>properties.png</file>
+
+    <file>zoom_11.png</file>
+    <file>zoom_in.png</file>
+    <file>zoom_out.png</file>
+
+    <file>print.png</file>
+    <file>export.png</file>
+    <file>picture.png</file>   
+</qresource>
+</RCC>
