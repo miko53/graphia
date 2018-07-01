@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE graphia-document>
+<graphia-document>
+  <meta-inf>
+    <doc-version>1.0.0</doc-version>
+    <components>
+      <component>
+        <name>flow-diagram</name>
+        <version>1.0.0</version>
+      </component>
+    </components>
+    <stat/>
+  </meta-inf>
+  <default-config>
+    <scene type="QRectF">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>3000</width>
+      <height>3000</height>
+    </scene>
+    <circleRadius type="qreal">25</circleRadius>
+    <arrowAngle type="integer">30</arrowAngle>
+    <arrowLength type="qreal">15</arrowLength>
+    <anchorSize type="qreal">5</anchorSize>
+    <storeHeight type="qreal">25</storeHeight>
+    <storeLength type="qreal">50</storeLength>
+    <alignmentH type="hex">4</alignmentH>
+    <alignmentV type="hex">80</alignmentV>
+    <displayLabel type="integer">1</displayLabel>
+    <font type="QFont">
+      <family>Deja Vu Sans</family>
+      <pointSize>8</pointSize>
+      <weight>50</weight>
+      <italic>0</italic>
+      <underline>0</underline>
+      <strikeout>0</strikeout>
+      <kerning>1</kerning>
+    </font>
+    <fontColor type="QColor">
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+      <alpha>255</alpha>
+    </fontColor>
+    <lineColor type="QColor">
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+      <alpha>255</alpha>
+    </lineColor>
+    <backgroundColor type="QColor">
+      <red>255</red>
+      <green>255</green>
+      <blue>255</blue>
+      <alpha>255</alpha>
+    </backgroundColor>
+  </default-config>
+  <document type="flow-process">
+    <flow-types>
+      <flow-type>
+        <id>0</id>
+        <name>void</name>
+        <definition>no type</definition>
+        <type>1</type>
+        <read-only>1</read-only>
+        <values/>
+      </flow-type>
+      <flow-type>
+        <id>1</id>
+        <name>signed char</name>
+        <definition>signed integer of 8bits</definition>
+        <type>3</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="-128" begin-name="-128" end="127" end-name="127"/>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>2</id>
+        <name>unsigned char</name>
+        <definition>unsigned integer of 8bits</definition>
+        <type>3</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="0" begin-name="0" end="255" end-name="255"/>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>3</id>
+        <name>signed short</name>
+        <definition>signed integer of 16bits</definition>
+        <type>3</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="-32768" begin-name="-32768" end="32767" end-name="32767"/>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>4</id>
+        <name>unsigned short</name>
+        <definition>unsigned integer of 16bits</definition>
+        <type>3</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="0" begin-name="0" end="65535" end-name="65535"/>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>5</id>
+        <name>signed long</name>
+        <definition>signed integer of 32bits</definition>
+        <type>3</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="-2147483648" begin-name="-2147483648" end="2147483647" end-name="2147483647"/>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>6</id>
+        <name>unsigned long</name>
+        <definition>unsigned integer of 32bits</definition>
+        <type>3</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="0" begin-name="0" end="0" end-name="4294967296"/>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>7</id>
+        <name>signed long long</name>
+        <definition>signed integer of 64bits</definition>
+        <type>3</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="-9223372036854775808" begin-name="2^63" end="9223372036854775807" end-name="2^63-1"/>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>8</id>
+        <name>unsigned long long</name>
+        <definition>unsigned integer of 64bits</definition>
+        <type>3</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="0" begin-name="0" end="18446744073709551615" end-name="2^64"/>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>9</id>
+        <name>ascii character</name>
+        <definition>ascii character</definition>
+        <type>5</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="0" begin-name="NUL (0)" end="127" end-name="DEL (127)"/>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>10</id>
+        <name>ext. ascii character</name>
+        <definition>extended ascii character</definition>
+        <type>5</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="0" begin-name="NUL (0)" end="255" end-name=" (255)"/>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>11</id>
+        <name>string</name>
+        <definition>string</definition>
+        <type>6</type>
+        <read-only>1</read-only>
+        <values>
+          <size>-1</size>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>12</id>
+        <name>bool</name>
+        <definition>boolean</definition>
+        <type>2</type>
+        <read-only>1</read-only>
+        <values>
+          <string>FALSE</string>
+          <string>TRUE</string>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>13</id>
+        <name>float</name>
+        <definition>float single precision</definition>
+        <type>4</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="2.22507e-308" begin-name="-INF" end="1.79769e+308" end-name="+INF"/>
+        </values>
+      </flow-type>
+      <flow-type>
+        <id>14</id>
+        <name>double</name>
+        <definition>float double precision</definition>
+        <type>4</type>
+        <read-only>1</read-only>
+        <values>
+          <range begin="2.22507e-308" begin-name="-INF" end="1.79769e+308" end-name="+INF"/>
+        </values>
+      </flow-type>
+    </flow-types>
+    <flow-datas>
+      <flow-data>
+        <id>0</id>
+        <name>config_data</name>
+        <class>0</class>
+        <flow-type>0</flow-type>
+      </flow-data>
+      <flow-data>
+        <id>1</id>
+        <name>input_data</name>
+        <class>1</class>
+        <flow-type>0</flow-type>
+      </flow-data>
+      <flow-data>
+        <id>2</id>
+        <name>output_data</name>
+        <class>5</class>
+        <flow-type>0</flow-type>
+      </flow-data>
+    </flow-datas>
+    <flow-model>
+      <implementation-process-list>
+        <implementation-process>
+          <id>0</id>
+          <name>process</name>
+          <flow-list/>
+          <process-instance-list/>
+          <store-list/>
+          <input-list/>
+          <output-list/>
+        </implementation-process>
+        <implementation-process>
+          <id>1</id>
+          <name>process</name>
+          <flow-list/>
+          <process-instance-list/>
+          <store-list/>
+          <input-list/>
+          <output-list/>
+        </implementation-process>
+      </implementation-process-list>
+      <context-process-list>
+        <context-process>
+          <id>0</id>
+          <name>process</name>
+          <hasChanged>1</hasChanged>
+          <flow-list>
+            <flow>
+              <id>0</id>
+              <name>arrow_0</name>
+              <data-id>1</data-id>
+              <input type="8" id="0"/>
+              <output type="1" id="-1"/>
+            </flow>
+            <flow>
+              <id>1</id>
+              <name>arrow_1</name>
+              <data-id>0</data-id>
+              <input type="4" id="0"/>
+              <output type="1" id="-1"/>
+            </flow>
+            <flow>
+              <id>2</id>
+              <name>arrow_2</name>
+              <data-id>2</data-id>
+              <input type="1" id="-1"/>
+              <output type="8" id="1"/>
+            </flow>
+          </flow-list>
+          <store-list>
+            <store>
+              <id>0</id>
+              <name>configuration</name>
+              <hasChanged>1</hasChanged>
+              <input-list/>
+              <output-list>
+                <output flow-id="1"/>
+              </output-list>
+            </store>
+          </store-list>
+          <terminator-list>
+            <terminator>
+              <id>0</id>
+              <name>input</name>
+              <hasChanged>1</hasChanged>
+              <type>1</type>
+              <flow id="0"/>
+            </terminator>
+            <terminator>
+              <id>1</id>
+              <name>output</name>
+              <hasChanged>1</hasChanged>
+              <type>0</type>
+              <flow id="2"/>
+            </terminator>
+          </terminator-list>
+          <process>
+            <id>-1</id>
+            <name>process</name>
+            <hasChanged>1</hasChanged>
+            <implements id="0"/>
+            <input-list>
+              <input flow-id="0"/>
+              <input flow-id="1"/>
+            </input-list>
+            <output-list>
+              <output flow-id="2"/>
+            </output-list>
+          </process>
+        </context-process>
+      </context-process-list>
+    </flow-model>
+    <diagrams-list>
+      <diagram>
+        <title>diagram</title>
+        <type>0</type>
+        <scene type="QRectF">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>3000</width>
+          <height>3000</height>
+        </scene>
+        <displayed type="integer">1</displayed>
+        <item type="7" id="0"/>
+        <gobject type="graphicscircle" id="-1">
+          <radius value="33,94112549694755"/>
+          <position type="QPointF">
+            <posx>375</posx>
+            <posy>137</posy>
+          </position>
+          <font type="QFont">
+            <family>Deja Vu Sans</family>
+            <pointSize>8</pointSize>
+            <weight>50</weight>
+            <italic>0</italic>
+            <underline>0</underline>
+            <strikeout>0</strikeout>
+            <kerning>1</kerning>
+          </font>
+          <fontColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </fontColor>
+          <lineColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </lineColor>
+          <backgroundColor type="QColor">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+            <alpha>255</alpha>
+          </backgroundColor>
+          <alignmentH type="hex">4</alignmentH>
+          <alignmentV type="hex">80</alignmentV>
+        </gobject>
+        <gobject type="graphicsrect" id="0">
+          <position type="QPointF">
+            <posx>131</posx>
+            <posy>101.5</posy>
+          </position>
+          <rect type="QRectF">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>75</width>
+            <height>25</height>
+          </rect>
+          <font type="QFont">
+            <family>Deja Vu Sans</family>
+            <pointSize>8</pointSize>
+            <weight>50</weight>
+            <italic>0</italic>
+            <underline>0</underline>
+            <strikeout>0</strikeout>
+            <kerning>1</kerning>
+          </font>
+          <fontColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </fontColor>
+          <lineColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </lineColor>
+          <backgroundColor type="QColor">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+            <alpha>255</alpha>
+          </backgroundColor>
+          <alignmentH type="hex">4</alignmentH>
+          <alignmentV type="hex">80</alignmentV>
+        </gobject>
+        <gobject type="graphicsdoubleline" id="0">
+          <position type="QPointF">
+            <posx>370</posx>
+            <posy>293.5</posy>
+          </position>
+          <rect type="QRectF">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>76</width>
+            <height>25</height>
+          </rect>
+          <font type="QFont">
+            <family>Deja Vu Sans</family>
+            <pointSize>8</pointSize>
+            <weight>50</weight>
+            <italic>0</italic>
+            <underline>0</underline>
+            <strikeout>0</strikeout>
+            <kerning>1</kerning>
+          </font>
+          <fontColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </fontColor>
+          <lineColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </lineColor>
+          <backgroundColor type="QColor">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+            <alpha>255</alpha>
+          </backgroundColor>
+          <alignmentH type="hex">4</alignmentH>
+          <alignmentV type="hex">80</alignmentV>
+        </gobject>
+        <gobject type="graphicsrect" id="1">
+          <position type="QPointF">
+            <posx>587</posx>
+            <posy>158.5</posy>
+          </position>
+          <rect type="QRectF">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>75</width>
+            <height>25</height>
+          </rect>
+          <font type="QFont">
+            <family>Deja Vu Sans</family>
+            <pointSize>8</pointSize>
+            <weight>50</weight>
+            <italic>0</italic>
+            <underline>0</underline>
+            <strikeout>0</strikeout>
+            <kerning>1</kerning>
+          </font>
+          <fontColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </fontColor>
+          <lineColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </lineColor>
+          <backgroundColor type="QColor">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+            <alpha>255</alpha>
+          </backgroundColor>
+          <alignmentH type="hex">4</alignmentH>
+          <alignmentV type="hex">80</alignmentV>
+        </gobject>
+        <gobject type="graphicsarrow" id="0">
+          <arrowAngle type="integer">30</arrowAngle>
+          <arrowLength type="qreal">15</arrowLength>
+          <labelDisplayed type="integer">1</labelDisplayed>
+          <font type="QFont">
+            <family>Deja Vu Sans</family>
+            <pointSize>8</pointSize>
+            <weight>50</weight>
+            <italic>0</italic>
+            <underline>0</underline>
+            <strikeout>0</strikeout>
+            <kerning>1</kerning>
+          </font>
+          <fontColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </fontColor>
+          <lineColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </lineColor>
+          <backgroundColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </backgroundColor>
+          <labelRect type="QRectF">
+            <posx>238</posx>
+            <posy>98.265</posy>
+            <width>60</width>
+            <height>14</height>
+          </labelRect>
+          <point-list>
+            <point type="QPointF">
+              <posx>206</posx>
+              <posy>114.53</posy>
+            </point>
+            <point type="QPointF">
+              <posx>310</posx>
+              <posy>116</posy>
+            </point>
+            <point type="QPointF">
+              <posx>379.268</posx>
+              <posy>154.464</posy>
+            </point>
+          </point-list>
+        </gobject>
+        <gobject type="graphicsarrow" id="1">
+          <arrowAngle type="integer">30</arrowAngle>
+          <arrowLength type="qreal">15</arrowLength>
+          <labelDisplayed type="integer">1</labelDisplayed>
+          <font type="QFont">
+            <family>Deja Vu Sans</family>
+            <pointSize>8</pointSize>
+            <weight>50</weight>
+            <italic>0</italic>
+            <underline>0</underline>
+            <strikeout>0</strikeout>
+            <kerning>1</kerning>
+          </font>
+          <fontColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </fontColor>
+          <lineColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </lineColor>
+          <backgroundColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </backgroundColor>
+          <labelRect type="QRectF">
+            <posx>414.377</posx>
+            <posy>245.191</posy>
+            <width>66</width>
+            <height>14</height>
+          </labelRect>
+          <point-list>
+            <point type="QPointF">
+              <posx>408.057</posx>
+              <posy>293.5</posy>
+            </point>
+            <point type="QPointF">
+              <posx>408.696</posx>
+              <posy>204.881</posy>
+            </point>
+          </point-list>
+        </gobject>
+        <gobject type="graphicsarrow" id="2">
+          <arrowAngle type="integer">30</arrowAngle>
+          <arrowLength type="qreal">15</arrowLength>
+          <labelDisplayed type="integer">1</labelDisplayed>
+          <font type="QFont">
+            <family>Deja Vu Sans</family>
+            <pointSize>8</pointSize>
+            <weight>50</weight>
+            <italic>0</italic>
+            <underline>0</underline>
+            <strikeout>0</strikeout>
+            <kerning>1</kerning>
+          </font>
+          <fontColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </fontColor>
+          <lineColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </lineColor>
+          <backgroundColor type="QColor">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </backgroundColor>
+          <labelRect type="QRectF">
+            <posx>480.941</posx>
+            <posy>173.069</posy>
+            <width>68</width>
+            <height>14</height>
+          </labelRect>
+          <point-list>
+            <point type="QPointF">
+              <posx>442.882</posx>
+              <posy>171.114</posy>
+            </point>
+            <point type="QPointF">
+              <posx>587</posx>
+              <posy>171.024</posy>
+            </point>
+          </point-list>
+        </gobject>
+      </diagram>
+      <diagram>
+        <title>process</title>
+        <type>1</type>
+        <scene type="QRectF">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>3000</width>
+          <height>3000</height>
+        </scene>
+        <displayed type="integer">0</displayed>
+        <item type="3" id="1"/>
+      </diagram>
+    </diagrams-list>
+  </document>
+</graphia-document>
